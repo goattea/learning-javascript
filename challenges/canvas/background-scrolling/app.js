@@ -1,10 +1,11 @@
-/** @type {HTMLCanvasElement} */
-const canvas = document.getElementById("canvas");
-/** @type {CanvasRenderingContext2D} */
-const ctx = canvas.getContext("2d");
-/** @type {HTMLImageElement} */
-const imageElement = document.getElementById("bg-image");
 //@ts-check
+export {};
+/** @type {HTMLCanvasElement} */ //@ts-ignore
+const canvas = document.getElementById("canvas");
+/** @type {CanvasRenderingContext2D} */ //@ts-ignore
+const context = canvas.getContext("2d");
+/** @type {HTMLImageElement} */ //@ts-ignore
+const imageElement = document.getElementById("bg-image");
 
 canvas.width = 800;
 canvas.height = 600;
@@ -16,10 +17,10 @@ function animate() {
 	//HINT: Your code will go in this function
 
 	// clear the canvas on each animation
-	this.ctx.clearRect(0, 0, canvas.width, canvas.height);
+	context.clearRect(0, 0, canvas.width, canvas.height);
 
-	ctx.drawImage(imageElement, x, 0);
-	ctx.drawImage(imageElement, x + imageElement.width, 0);
+	context.drawImage(imageElement, x, 0);
+	context.drawImage(imageElement, x + imageElement.width, 0);
 
 	requestAnimationFrame(animate);
 }

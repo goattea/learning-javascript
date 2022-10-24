@@ -1,16 +1,17 @@
-/** @type {HTMLCanvasElement} */
-const canvas = document.getElementById("canvas");
-/** @type {CanvasRenderingContext2D} */
-const ctx = canvas.getContext("2d");
-/** @type {HTMLImageElement} */
-const cloudsNear = document.getElementById("clouds-near");
-/** @type {HTMLImageElement} */
-const cloudsClose = document.getElementById("clouds-close");
-/** @type {HTMLImageElement} */
-const cloudsMedium = document.getElementById("clouds-medium");
-/** @type {HTMLImageElement} */
-const cloudsFar = document.getElementById("clouds-far");
 //@ts-check
+export {};
+/** @type {HTMLCanvasElement} */ //@ts-ignore
+const canvas = document.getElementById("canvas");
+/** @type {CanvasRenderingContext2D} */ //@ts-ignore
+const context = canvas.getContext("2d");
+/** @type {HTMLImageElement} */ //@ts-ignore
+const cloudsNear = document.getElementById("clouds-near");
+/** @type {HTMLImageElement} */ //@ts-ignore
+const cloudsClose = document.getElementById("clouds-close");
+/** @type {HTMLImageElement} */ //@ts-ignore
+const cloudsMedium = document.getElementById("clouds-medium");
+/** @type {HTMLImageElement} */ //@ts-ignore
+const cloudsFar = document.getElementById("clouds-far");
 
 canvas.width = 800;
 canvas.height = 600;
@@ -32,8 +33,8 @@ class ParallaxBackgroundImage {
 	}
 
 	draw() {
-		ctx.drawImage(this.image, this.x, 0);
-		ctx.drawImage(this.image, this.x + this.image.width, 0);
+		context.drawImage(this.image, this.x, 0);
+		context.drawImage(this.image, this.x + this.image.width, 0);
 	}
 }
 
@@ -46,7 +47,7 @@ let images = [
 
 function animate() {
 	// clear the canvas on each animation
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	context.clearRect(0, 0, canvas.width, canvas.height);
 
 	images.forEach((i) => {
 		i.update();
