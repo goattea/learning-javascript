@@ -8,9 +8,12 @@ body {
 	margin: 3em;
 }
 
-h1 {
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-	font-weight: 800;
+h1,
+h2,
+h3 {
+	font-family: monospace;
+	font-weight: bolder;
+	color: indigo;
 }
 
 canvas.border {
